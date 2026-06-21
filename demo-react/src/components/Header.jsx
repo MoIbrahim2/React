@@ -1,4 +1,4 @@
-import NavbarReact from "./Navbar"
+import NavbarReact from "./Navbar/Navbar"
 
 function Header() {
   return (
