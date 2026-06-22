@@ -1,5 +1,5 @@
 .container {
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
   padding: 3rem 2rem;
 }
@@ -7,16 +7,29 @@
 .container h1 {
   text-align: center;
   margin-bottom: 2rem;
-  color: #212529;
 }
 
 .card {
   background: white;
-  padding: 2rem;
   border-radius: 16px;
+  padding: 2rem;
 
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
 
-  text-align: center;
-  font-size: 1.25rem;
+.detailRow {
+  margin-bottom: 1.5rem;
+}
+
+.label {
+  display: block;
+  font-weight: 700;
+  color: #212529;
+  margin-bottom: 0.5rem;
+}
+
+.description {
+  margin: 0;
+  color: #6c757d;
+  line-height: 1.7;
 }

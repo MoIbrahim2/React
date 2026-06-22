@@ -9,11 +9,14 @@ import Courses from './pages/Courses/Courses'
 import CourseDetails from './pages/CourseDetails/CourseDetails'
 import NotFound from './pages/NotFound/NotFound'
 import About from './pages/About/About'
+import CoursesLayout from './components/CoursesLayout/CoursesLayout'
+import CourseAdd from './pages/CourseAdd/CourseAdd'
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Layout />,
+    errorElement: <NotFound />,
     children: [
       {
         index: true, // renders at "/"
@@ -25,15 +28,21 @@ const router = createBrowserRouter([
       },
       {
         path: "courses", // "/courses"
-        element: <Courses />,
-      },
-      {
-        path: "courses/:id", // "/courses/1"
-        element: <CourseDetails />,
-      },
-      {
-        path: "*",
-        element: <NotFound />,
+        element: <CoursesLayout />,
+        children: [
+          {
+            index: true, // renders at "/courses"
+            element: <Courses />,
+          },
+          {
+            path: ":id", 
+            element: <CourseDetails />,
+          },
+          {
+            path: "add",
+            element: <CourseAdd />,
+          }
+        ],
       },
     ],
   },

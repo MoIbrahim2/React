@@ -11,13 +11,9 @@ function CourseCard({ course }) {
     <div className={styles.card}>
       <h2>{course.title}</h2>
 
-      <p>
-        <strong>Duration:</strong> {course.duration}
-      </p>
-
       <Link
         to={`/courses/${course.id}`}
-        className={styles.button}
+        className={styles.detailsButton}
       >
         View Details
       </Link>
